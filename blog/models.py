@@ -31,7 +31,7 @@ class GalleryPost(models.Model):
 
 class BlogVisit(models.Model):
     blog = models.ForeignKey(BlogPost)
-    visit_ip = models.IPAddressField()
+    visit_ip = models.GenericIPAddressField()
     visit_time = models.DateTimeField()
 
 class About(models.Model):
