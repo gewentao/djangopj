@@ -75,15 +75,15 @@ WSGI_APPLICATION = 'djangopj.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-DB_NAME = os.getenv('MYSQL_INSTANCE_NAME')
-DB_USER = os.getenv('MYSQL_USERNAME')
-DB_PASSWORD = os.getenv('MYSQL_PASSWORD')
-DB_HOST = os.getenv('MYSQL_PORT_3306_TCP_ADDR')
-DB_PORT = os.getenv('MYSQL_PORT_3306_TCP_PORT')
+DB_NAME = os.getenv('POSTGRESQL_INSTANCE_NAME')
+DB_USER = os.getenv('POSTGRESQL_USERNAME')
+DB_PASSWORD = os.getenv('POSTGRESQL_PASSWORD')
+DB_HOST = os.getenv('POSTGRESQL_PORT_5432_TCP_ADDR')
+DB_PORT = os.getenv('POSTGRESQL_PORT_5432_TCP_PORT')
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'django.db.backends.postgresql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': DB_NAME,                      # Or path to database file if using sqlite3.
         'USER': DB_USER,                      # Not used with sqlite3.
         'PASSWORD': DB_PASSWORD,                  # Not used with sqlite3.
