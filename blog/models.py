@@ -7,7 +7,6 @@ from django.contrib import admin
 class BlogPost(models.Model):
     title = models.CharField(max_length=150)
     body = models.TextField()
-    abstract = models.TextField() #the abstract (shown in the main page)
     counts = models.IntegerField(default=0) #count the click times
     create_time = models.DateTimeField()
     update_time = models.DateTimeField(blank=True, null=True)
